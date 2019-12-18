@@ -1,0 +1,3 @@
+CREATE TRIGGER notify_newtable_event
+AFTER INSERT OR UPDATE OR DELETE ON newtable
+  FOR EACH ROW EXECUTE PROCEDURE notify_event();
